@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: NBA
+    schema: RAW
+    tables:
+      - name: PLAYERS_SEASON_DATA
+        description: "Raw data table containing players' season statistics."
