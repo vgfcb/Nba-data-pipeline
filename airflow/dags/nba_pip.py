@@ -4,14 +4,14 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 import sys
 
-# Add your local module path inside the container
+
 
 from nba_data import run as extract_load_nba
 
 with DAG(
     dag_id="nba_pipeline",
     start_date=datetime(2026, 1, 1),
-    schedule="@daily",       # Updated for Airflow 2.5+
+    schedule="@daily",       
     catchup=False,
     tags=["nba", "etl", "dbt"],
 ) as dag:
